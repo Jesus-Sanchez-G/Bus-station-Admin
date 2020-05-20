@@ -3,8 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Rivel/Documents/NetBeansProjects/Bus%20Station%20Admin/src/bus/station/admin/GUI/registrar_usr.java</file>
-            <file>file:/C:/Users/Rivel/Documents/NetBeansProjects/Bus%20Station%20Admin/src/bus/station/admin/GUI/FORMS/Agregar_terminal.java</file>
+            <file>file:/home/jesus/Documentos/Bus%20Station%20Admin/src/bus/station/admin/GUI/Iniciar_sesion_adm.java</file>
+            <file>file:/home/jesus/Documentos/Bus%20Station%20Admin/src/bus/station/admin/GUI/FORMS/registrar_adm.java</file>
+            <file>file:/home/jesus/Documentos/Bus%20Station%20Admin/src/bus/station/admin/GUI/lista_terminales.java</file>
+            <file>file:/home/jesus/Documentos/Bus%20Station%20Admin/src/bus/station/admin/GUI/lista_autobuses.java</file>
+            <file>file:/home/jesus/Documentos/Bus%20Station%20Admin/src/bus/station/admin/GUI/FORMS/ConexionPostgres.java</file>
+            <file>file:/home/jesus/Documentos/Bus%20Station%20Admin/src/bus/station/admin/GUI/lista_choferes.java</file>
+            <file>file:/home/jesus/Documentos/Bus%20Station%20Admin/src/bus/station/admin/GUI/datos_terminal.java</file>
+            <file>file:/home/jesus/Documentos/Bus%20Station%20Admin/src/bus/station/admin/GUI/registrar_usr.java</file>
+            <file>file:/home/jesus/Documentos/Bus%20Station%20Admin/src/bus/station/admin/GUI/datos_chofer.java</file>
+            <file>file:/home/jesus/Documentos/Bus%20Station%20Admin/src/bus/station/admin/GUI/iniciar_sesion_sup.java</file>
+            <file>file:/home/jesus/Documentos/Bus%20Station%20Admin/src/bus/station/admin/GUI/FORMS/Agregar_autobus.java</file>
+            <file>file:/home/jesus/Documentos/Bus%20Station%20Admin/src/bus/station/admin/GUI/FORMS/Agregar_chofer.java</file>
+            <file>file:/home/jesus/Documentos/Bus%20Station%20Admin/src/bus/station/admin/GUI/inic.java</file>
+            <file>file:/home/jesus/Documentos/Bus%20Station%20Admin/src/bus/station/admin/GUI/datos_autobus.java</file>
+            <file>file:/home/jesus/Documentos/Bus%20Station%20Admin/src/bus/station/admin/GUI/FORMS/Agregar_terminal.java</file>
+            <file>file:/home/jesus/Documentos/Bus%20Station%20Admin/src/bus/station/admin/GUI/iniciar_sesion.java</file>
+            <file>file:/home/jesus/Documentos/Bus%20Station%20Admin/src/bus/station/admin/GUI/FORMS/registrar_sup.java</file>
+            <file>file:/home/jesus/Documentos/Bus%20Station%20Admin/src/bus/station/admin/GUI/supervisor.java</file>
         </group>
     </open-files>
 </project-private>

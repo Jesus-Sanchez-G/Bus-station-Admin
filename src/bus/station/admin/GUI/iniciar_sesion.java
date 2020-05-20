@@ -32,10 +32,11 @@ public class iniciar_sesion extends javax.swing.JFrame {
         Inicia_Admin_Button = new javax.swing.JButton();
         Inicia_Sup_Button = new javax.swing.JButton();
         volver_inicio_Button = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 255));
+        jPanel1.setBackground(java.awt.Color.white);
 
         Inicia_Admin_Button.setText("INICIAR SESION ADMINISTRADOR");
         Inicia_Admin_Button.addActionListener(new java.awt.event.ActionListener() {
@@ -58,6 +59,9 @@ public class iniciar_sesion extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/bus-logo-abstract_7315-17.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -73,11 +77,17 @@ public class iniciar_sesion extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(volver_inicio_Button)))
                 .addContainerGap(197, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(172, 172, 172))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(266, Short.MAX_VALUE)
+                .addGap(33, 33, 33)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(Inicia_Admin_Button)
                 .addGap(18, 18, 18)
                 .addComponent(Inicia_Sup_Button)
@@ -115,7 +125,8 @@ public class iniciar_sesion extends javax.swing.JFrame {
     }//GEN-LAST:event_Inicia_Sup_ButtonActionPerformed
 
     private void volver_inicio_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volver_inicio_ButtonActionPerformed
-        
+        inic IN = new inic();
+        IN.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_volver_inicio_ButtonActionPerformed
 
@@ -157,6 +168,7 @@ public class iniciar_sesion extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Inicia_Admin_Button;
     private javax.swing.JButton Inicia_Sup_Button;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton volver_inicio_Button;
     // End of variables declaration//GEN-END:variables

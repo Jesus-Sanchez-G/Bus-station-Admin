@@ -5,6 +5,9 @@
  */
 package bus.station.admin.GUI.FORMS;
 
+import bus.station.admin.GUI.lista_terminales;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Rivel
@@ -16,6 +19,7 @@ public class Agregar_terminal extends javax.swing.JFrame {
      */
     public Agregar_terminal() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -28,7 +32,7 @@ public class Agregar_terminal extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        volver_lista_terminales = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -44,7 +48,12 @@ public class Agregar_terminal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("ATRAS");
+        volver_lista_terminales.setText("Atras");
+        volver_lista_terminales.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volver_lista_terminalesActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 204));
@@ -62,6 +71,11 @@ public class Agregar_terminal extends javax.swing.JFrame {
         jLabel6.setText("CODIGO POSTAL");
 
         jButton2.setText("AGREGAR TERMINAL");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -71,7 +85,7 @@ public class Agregar_terminal extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton1))
+                        .addComponent(volver_lista_terminales))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(218, 218, 218)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -86,7 +100,7 @@ public class Agregar_terminal extends javax.swing.JFrame {
                                         .addGap(179, 179, 179)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))))
+                                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, Short.MAX_VALUE))))
                                 .addGap(51, 51, 51))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
@@ -107,7 +121,7 @@ public class Agregar_terminal extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(volver_lista_terminales)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
                 .addGap(30, 30, 30)
@@ -153,6 +167,26 @@ public class Agregar_terminal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void volver_lista_terminalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volver_lista_terminalesActionPerformed
+        lista_terminales LT = new lista_terminales();
+        LT.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_volver_lista_terminalesActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        try{
+        ConexionPostgres c = new ConexionPostgres();
+        c.Conectar();
+        c.registrarTerminal(Integer.parseInt(this.jTextField1.getText()), this.jTextField2.getText(), Integer.parseInt(this.jTextField3.getText()), Long.parseLong(this.jTextField4.getText()), Integer.parseInt(this.jTextField5.getText()), 0);
+        }catch(Exception e){
+        JOptionPane.showMessageDialog(null,"ERROR. Inserta correctamente los datos requeridos.");
+        }
+        
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -190,7 +224,6 @@ public class Agregar_terminal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -204,5 +237,6 @@ public class Agregar_terminal extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JButton volver_lista_terminales;
     // End of variables declaration//GEN-END:variables
 }
